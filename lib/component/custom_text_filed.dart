@@ -3,8 +3,13 @@ import 'package:mfp/const/colors.dart';
 
 class CustomTextFiled extends StatelessWidget {
   final String label;
+  final FormFieldSetter<String> onSaved;
 
-  const CustomTextFiled({required this.label, super.key});
+  const CustomTextFiled({
+    required this.label,
+    required this.onSaved,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +34,26 @@ class CustomTextFiled extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
+                    child: TextFormField(
+                      onSaved: onSaved,
+                      validator: (String? val) {
+                        if (val == null || val.isEmpty) {
+                          return '값을 입력해주세요.';
+                        }
+                        return null;
+                      },
                       cursorColor: PRIMARY_COLOR,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none,
                           filled: true,
                           fillColor: Colors.transparent),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10.0),
                     child: Icon(Icons.copy),
                   )

@@ -15,6 +15,8 @@ class LocalDatabase extends _$LocalDatabase {
 
   Future<int> createApp(AppCompanion data) => into(app).insert(data);
 
+  Stream<List<AppData>> watchApp() => select(app).watch();
+
   @override
   int get schemaVersion => 1;
 }
