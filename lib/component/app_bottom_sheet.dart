@@ -13,7 +13,10 @@ class AppBottomSheet extends StatelessWidget {
       color: Colors.white,
       height: screenHeight * 0.9,
       child: Column(
-        children: [CustomTextFiled(label: 'ID')],
+        children: [
+          CustomTextFiled(label: 'ID'),
+          CustomTextFiled(label: 'PW'),
+        ],
       ),
     );
   }

@@ -11,7 +11,7 @@ class CustomTextFiled extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
-        height: 50,
+        height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: SECONDARY_COLOR,
