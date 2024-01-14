@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mfp/const/colors.dart';
 
 class ContentCard extends StatelessWidget {
   final String title;
@@ -14,7 +15,7 @@ class ContentCard extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(
             width: 1.0,
-            color: const Color.fromARGB(255, 119, 119, 119),
+            color: PRIMARY_COLOR,
           ),
           borderRadius: BorderRadius.circular(8.0)),
       child: Padding(
@@ -23,7 +24,7 @@ class ContentCard extends StatelessWidget {
           children: [
             const Icon(
               Icons.square_rounded,
-              color: Color.fromARGB(255, 119, 119, 119),
+              color: PRIMARY_COLOR,
               size: 60.0,
             ),
             const SizedBox(
@@ -38,7 +39,7 @@ class ContentCard extends StatelessWidget {
             ),
             const Icon(
               Icons.arrow_forward_ios,
-              color: Color.fromARGB(255, 119, 119, 119),
+              color: PRIMARY_COLOR,
               size: 30.0,
             )
           ],
